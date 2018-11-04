@@ -26,6 +26,6 @@ class CreateJobModelsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posted_job_info');
+        Schema::dropIfExists('posted_job_info)
     }
 }
