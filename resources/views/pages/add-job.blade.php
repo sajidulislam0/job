@@ -29,29 +29,23 @@
             <div class="notification notice closeable margin-bottom-40">
                 <p><span>Have an account?</span> If you don’t have an account you can create one below by entering your email address. A password will be automatically emailed to you.</p>
             </div>
-
-            {!! Form::open(array('url' => '#', 'class' => 'add-job-form','id'=> 'post_job','files' =>true)) !!}
-
+            {!! Form::open(array('url' => '/save-job', 'class' => 'add-job-form','id'=> 'post_job','files' =>true)) !!}
             <!-- Email -->
             <div class="form">
                 {!! Form::label('Your Email:') !!}
                 {!! Form::email('email_address', old('email_address'), ['class'=>'form-control', 'placeholder'=>'mail@example.com']) !!}
             </div>
-
             <!-- Title -->
             <div class="form">
                 {!! Form::label('Job Title:') !!}
                 {!! Form::text('job_title', old('job_title'), ['class'=>'form-control', 'placeholder'=>' ']) !!}
             </div>
-
             <!-- Location -->
             <div class="form">
                 {!! Form::label('Location :') !!}<span>(optional)</span>
                 {!! Form::text('job_title', old('job_title'), ['class'=>'form-control', 'placeholder'=>'e.g. London']) !!}
                 <p class="note">Leave this blank if the location is not important</p>
-
             </div>
-
             <!-- Job Type -->
             <div class="form">
                 <h5>Job Type</h5>
@@ -63,8 +57,6 @@
                     <option value="2">Freelance</option>
                 </select>
             </div>
-
-
             <!-- Choose Category -->
             <div class="form">
                 <div class="select">
@@ -81,27 +73,18 @@
                     </select>
                 </div>
             </div>
-
             <!-- Tags -->
             <div class="form">
-                <h5>Job Tags <span>(optional)</span></h5>
-                <input class="search-field" type="text" placeholder="e.g. PHP, Social Media, Management" value=""/>
+                {!! Form::label('Job Tags :') !!}<span>(optional)</span>
+                {!! Form::text('job_tags', old('job_tags'), ['class'=>'form-control', 'placeholder'=>'e.g. PHP, Social Media, Management']) !!}
                 <p class="note">Comma separate tags, such as required skills or technologies, for this job.</p>
-            </div>
-
-
-            <!-- Description -->
-            <div class="form">
-                {!! Form::label('Description:') !!}
-                {!! Form::textarea('message', old('message'), ['class'=>' WYSIWYG','cols' =>'40','rows'=>'3', 'id' => 'summary','spelcheck'=>'true']) !!}
             </div>
 
             <!-- Application email/url -->
             <div class="form">
-                <h5>Application email / URL</h5>
-                <input type="text" placeholder="Enter an email address or website URL">
+                {!! Form::label('Application email / URL :') !!}
+                {!! Form::text('application_email', old('application_email'), ['class'=>'form-control', 'placeholder'=>'Enter an email address or website URL']) !!}
             </div>
-
             <!-- TClosing Date -->
             <div class="form">
                 <h5></h5>
@@ -110,39 +93,30 @@
                 <p class="note">Deadline for new applicants.</p>
 
             </div>
-
-
             <!-- Company Details -->
             <div class="divider"><h3>Company Details</h3></div>
 
             <!-- Company Name -->
             <div class="form">
-                <h5>Company Name</h5>
-                <input type="text" placeholder="Enter the name of the company">
+                {!! Form::label('Company Name:') !!}
+                {!! Form::text('company_name', old('company_name'), ['class'=>'form-control', 'placeholder'=>'Enter the name of the company']) !!}
             </div>
 
             <!-- Website -->
             <div class="form">
-                <h5>Website <span>(optional)</span></h5>
-                <input type="text" placeholder="http://">
+                {!! Form::label('Website:') !!}
+                {!! Form::text('website', old('website'), ['class'=>'form-control', 'placeholder'=>'http://']) !!}
             </div>
 
             <!-- Teagline -->
-            <div class="form">
-                <h5>Tagline <span>(optional)</span></h5>
-                <input type="text" placeholder="Briefly describe your company">
+            <div class="form">                
+                {!! Form::label('Tagline:') !!}
+                {!! Form::text('tagline', old('tagline'), ['class'=>'form-control', 'placeholder'=>'Briefly describe your company']) !!}
             </div>
-
-            <!-- Video -->
+            <!-- Description -->
             <div class="form">
-                <h5>Video <span>(optional)</span></h5>
-                <input type="text" placeholder="A link to a video about your company">
-            </div>
-
-            <!-- Twitter -->
-            <div class="form">
-                <h5>Twitter Username <span>(optional)</span></h5>
-                <input type="text" placeholder="@yourcompany">
+                {!! Form::label('Description:') !!}
+                {!! Form::textarea('message', old('message'), ['class'=>' WYSIWYG','cols' =>'40','rows'=>'3', 'id' => 'summary','spelcheck'=>'true']) !!}
             </div>
 
             <!-- Logo -->
