@@ -1,6 +1,6 @@
 
-@extends('master.master');
-@section('pages.main_content');
+@extends('master.master')
+@section('pages.main_content')
 <!-- Banner
 ================================================== -->
 <div id="banner" class="with-transparent-header parallax background" style="background-image:url({{asset('public/images/banner-home-02.jpg')}})" data-img-width="2000" data-img-height="1330" data-diff="300">

@@ -17,3 +17,4 @@
 
 
 Route::get('/','HomepageController@index');
+Route::get('/post-job','JobController@index');
